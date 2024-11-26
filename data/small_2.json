@@ -1,0 +1,1037 @@
+{
+    "parameters": {
+        "two_tone_delta": 11,
+        "resequencing_cost": 5000
+    },
+    "constraints": [
+        {
+            "max_vehicles": 2,
+            "cost": 5000,
+            "id": 1,
+            "window_size": 3,
+            "vehicles": [
+                3,
+                5,
+                7,
+                9,
+                11,
+                14,
+                15,
+                17,
+                18,
+                20,
+                21,
+                25,
+                26,
+                29,
+                30,
+                31,
+                32,
+                36,
+                39,
+                42,
+                46,
+                47,
+                48,
+                49,
+                50,
+                52,
+                57,
+                58
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 5,
+            "cost": 2000,
+            "id": 2,
+            "window_size": 9,
+            "vehicles": [
+                3,
+                7,
+                9,
+                11,
+                14,
+                17,
+                18,
+                20,
+                21,
+                25,
+                26,
+                30,
+                31,
+                32,
+                42,
+                46,
+                47,
+                48,
+                49,
+                50,
+                57
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 3,
+            "cost": 6000,
+            "id": 4,
+            "window_size": 5,
+            "vehicles": [
+                3,
+                5,
+                7,
+                9,
+                11,
+                14,
+                15,
+                17,
+                18,
+                20,
+                21,
+                25,
+                26,
+                29,
+                30,
+                31,
+                32,
+                36,
+                39,
+                42,
+                46,
+                47,
+                48,
+                49,
+                50,
+                52,
+                57,
+                58
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 5000,
+            "id": 5,
+            "window_size": 10,
+            "vehicles": [
+                7,
+                14,
+                32,
+                48
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 3,
+            "cost": 4000,
+            "id": 6,
+            "window_size": 6,
+            "vehicles": [
+                7,
+                9,
+                11,
+                13,
+                17,
+                20,
+                21,
+                25,
+                26,
+                30,
+                31,
+                33,
+                42,
+                46,
+                48,
+                49,
+                50,
+                55,
+                57
+            ],
+            "type": "rolling_window",
+            "shop": "paint"
+        },
+        {
+            "max_vehicles": 3,
+            "cost": 1200,
+            "id": 7,
+            "window_size": 5,
+            "vehicles": [
+                2,
+                5,
+                8,
+                10,
+                12,
+                15,
+                16,
+                17,
+                19,
+                21,
+                22,
+                23,
+                27,
+                29,
+                30,
+                34,
+                35,
+                36,
+                37,
+                38,
+                40,
+                44,
+                45,
+                46,
+                47,
+                50,
+                51,
+                52,
+                53,
+                54,
+                59,
+                60
+            ],
+            "type": "rolling_window",
+            "shop": "body"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 5000,
+            "id": 8,
+            "window_size": 3,
+            "vehicles": [
+                1,
+                6,
+                14,
+                24,
+                32,
+                41,
+                42,
+                48,
+                61
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 1500,
+            "id": 10,
+            "window_size": 2,
+            "vehicles": [
+                15,
+                17,
+                21,
+                30,
+                34,
+                36,
+                46,
+                47,
+                50,
+                52
+            ],
+            "type": "rolling_window",
+            "shop": "body"
+        },
+        {
+            "max_vehicles": 5,
+            "cost": 4000,
+            "id": 11,
+            "window_size": 30,
+            "vehicles": [
+                4,
+                9,
+                28,
+                49,
+                57
+            ],
+            "type": "rolling_window",
+            "shop": "paint"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 10000,
+            "id": 12,
+            "window_size": 2,
+            "vehicles": [
+                7,
+                9,
+                11,
+                13,
+                17,
+                20,
+                21,
+                25,
+                26,
+                30,
+                31,
+                33,
+                42,
+                46,
+                48,
+                49,
+                50,
+                55,
+                57
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "cost": 700,
+            "partition": [
+                [
+                    15,
+                    17,
+                    21,
+                    30,
+                    34,
+                    36,
+                    46,
+                    47,
+                    50,
+                    52
+                ],
+                [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    16,
+                    18,
+                    19,
+                    20,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    31,
+                    32,
+                    33,
+                    35,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    48,
+                    49,
+                    51,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61
+                ]
+            ],
+            "id": 13,
+            "type": "lot_change",
+            "shop": "body"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 5000,
+            "id": 14,
+            "window_size": 3,
+            "vehicles": [
+                15,
+                17,
+                30,
+                34,
+                36,
+                46,
+                47,
+                52
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 2,
+            "cost": 2000,
+            "id": 15,
+            "window_size": 4,
+            "vehicles": [
+                3,
+                4,
+                5,
+                7,
+                11,
+                13,
+                14,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                24,
+                28,
+                30,
+                32,
+                34,
+                38,
+                41,
+                48,
+                50,
+                51,
+                57,
+                59
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "cost": 12100,
+            "partition": [
+                [
+                    4,
+                    9,
+                    28,
+                    49,
+                    57
+                ],
+                [
+                    30,
+                    34,
+                    52
+                ],
+                [
+                    1,
+                    8,
+                    12,
+                    14,
+                    18,
+                    19,
+                    25,
+                    26,
+                    27,
+                    31,
+                    33,
+                    39,
+                    41,
+                    43,
+                    45,
+                    55,
+                    58,
+                    60,
+                    61
+                ],
+                [
+                    2,
+                    3,
+                    5,
+                    6,
+                    7,
+                    11,
+                    13,
+                    15,
+                    17,
+                    20,
+                    22,
+                    23,
+                    24,
+                    29,
+                    32,
+                    35,
+                    36,
+                    37,
+                    40,
+                    42,
+                    44,
+                    46,
+                    47,
+                    48,
+                    51,
+                    53,
+                    54,
+                    56,
+                    59
+                ],
+                [
+                    10,
+                    16,
+                    38
+                ],
+                [
+                    21,
+                    50
+                ]
+            ],
+            "id": 16,
+            "type": "lot_change",
+            "shop": "paint"
+        },
+        {
+            "max_vehicles": 5,
+            "cost": 1700,
+            "min_vehicles": 1,
+            "id": 17,
+            "vehicles": [
+                15,
+                17,
+                21,
+                30,
+                34,
+                36,
+                46,
+                47,
+                50,
+                52
+            ],
+            "type": "batch_size",
+            "shop": "body"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 5000,
+            "id": 18,
+            "window_size": 2,
+            "vehicles": [
+                7,
+                14,
+                15,
+                15,
+                17,
+                17,
+                18,
+                20,
+                21,
+                21,
+                24,
+                30,
+                30,
+                32,
+                34,
+                34,
+                36,
+                36,
+                41,
+                42,
+                46,
+                46,
+                47,
+                47,
+                48,
+                50,
+                50,
+                52,
+                52,
+                61
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 5,
+            "cost": 5000,
+            "id": 19,
+            "window_size": 12,
+            "vehicles": [
+                3,
+                4,
+                9,
+                19,
+                21,
+                25,
+                26,
+                27,
+                28,
+                31,
+                43,
+                46,
+                49,
+                50,
+                57,
+                58,
+                59
+            ],
+            "type": "rolling_window",
+            "shop": "paint"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 7500,
+            "id": 21,
+            "window_size": 2,
+            "vehicles": [
+                1,
+                6,
+                7,
+                14,
+                21,
+                24,
+                32,
+                39,
+                41,
+                42,
+                48,
+                50,
+                56,
+                61
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 10000,
+            "id": 22,
+            "window_size": 4,
+            "vehicles": [
+                7,
+                9,
+                11,
+                13,
+                17,
+                20,
+                21,
+                25,
+                26,
+                30,
+                31,
+                33,
+                42,
+                46,
+                48,
+                49,
+                50,
+                55,
+                57
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 1600,
+            "id": 24,
+            "window_size": 2,
+            "vehicles": [
+                1,
+                6,
+                7,
+                14,
+                24,
+                32,
+                39,
+                41,
+                42,
+                48,
+                56,
+                61
+            ],
+            "type": "rolling_window",
+            "shop": "body"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 15000,
+            "id": 25,
+            "window_size": 6,
+            "vehicles": [
+                15,
+                36,
+                52,
+                58
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 3,
+            "cost": 5000,
+            "id": 26,
+            "window_size": 4,
+            "vehicles": [
+                3,
+                5,
+                7,
+                9,
+                11,
+                14,
+                15,
+                17,
+                18,
+                20,
+                21,
+                25,
+                26,
+                29,
+                30,
+                31,
+                32,
+                34,
+                36,
+                39,
+                42,
+                46,
+                47,
+                48,
+                49,
+                50,
+                52,
+                57,
+                58
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 2000,
+            "id": 30,
+            "window_size": 10,
+            "vehicles": [
+                21,
+                50
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 5000,
+            "id": 32,
+            "window_size": 3,
+            "vehicles": [
+                15,
+                17,
+                21,
+                30,
+                34,
+                36,
+                46,
+                47,
+                50,
+                52
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        },
+        {
+            "max_vehicles": 1,
+            "cost": 3500,
+            "id": 34,
+            "window_size": 3,
+            "vehicles": [
+                7,
+                14,
+                15,
+                15,
+                17,
+                17,
+                18,
+                20,
+                21,
+                21,
+                24,
+                30,
+                30,
+                32,
+                34,
+                34,
+                36,
+                36,
+                41,
+                42,
+                46,
+                46,
+                47,
+                47,
+                48,
+                50,
+                50,
+                52,
+                52,
+                61
+            ],
+            "type": "rolling_window",
+            "shop": "assembly"
+        }
+    ],
+    "vehicles": [
+        {
+            "id": 1,
+            "type": "regular"
+        },
+        {
+            "id": 2,
+            "type": "regular"
+        },
+        {
+            "id": 3,
+            "type": "two-tone"
+        },
+        {
+            "id": 4,
+            "type": "two-tone"
+        },
+        {
+            "id": 5,
+            "type": "regular"
+        },
+        {
+            "id": 6,
+            "type": "regular"
+        },
+        {
+            "id": 7,
+            "type": "regular"
+        },
+        {
+            "id": 8,
+            "type": "regular"
+        },
+        {
+            "id": 9,
+            "type": "two-tone"
+        },
+        {
+            "id": 10,
+            "type": "regular"
+        },
+        {
+            "id": 11,
+            "type": "regular"
+        },
+        {
+            "id": 12,
+            "type": "regular"
+        },
+        {
+            "id": 13,
+            "type": "regular"
+        },
+        {
+            "id": 14,
+            "type": "regular"
+        },
+        {
+            "id": 15,
+            "type": "regular"
+        },
+        {
+            "id": 16,
+            "type": "regular"
+        },
+        {
+            "id": 17,
+            "type": "regular"
+        },
+        {
+            "id": 18,
+            "type": "regular"
+        },
+        {
+            "id": 19,
+            "type": "two-tone"
+        },
+        {
+            "id": 20,
+            "type": "regular"
+        },
+        {
+            "id": 21,
+            "type": "two-tone"
+        },
+        {
+            "id": 22,
+            "type": "regular"
+        },
+        {
+            "id": 23,
+            "type": "regular"
+        },
+        {
+            "id": 24,
+            "type": "regular"
+        },
+        {
+            "id": 25,
+            "type": "two-tone"
+        },
+        {
+            "id": 26,
+            "type": "two-tone"
+        },
+        {
+            "id": 27,
+            "type": "two-tone"
+        },
+        {
+            "id": 28,
+            "type": "two-tone"
+        },
+        {
+            "id": 29,
+            "type": "regular"
+        },
+        {
+            "id": 30,
+            "type": "regular"
+        },
+        {
+            "id": 31,
+            "type": "two-tone"
+        },
+        {
+            "id": 32,
+            "type": "regular"
+        },
+        {
+            "id": 33,
+            "type": "regular"
+        },
+        {
+            "id": 34,
+            "type": "regular"
+        },
+        {
+            "id": 35,
+            "type": "regular"
+        },
+        {
+            "id": 36,
+            "type": "regular"
+        },
+        {
+            "id": 37,
+            "type": "regular"
+        },
+        {
+            "id": 38,
+            "type": "regular"
+        },
+        {
+            "id": 39,
+            "type": "regular"
+        },
+        {
+            "id": 40,
+            "type": "regular"
+        },
+        {
+            "id": 41,
+            "type": "regular"
+        },
+        {
+            "id": 42,
+            "type": "regular"
+        },
+        {
+            "id": 43,
+            "type": "two-tone"
+        },
+        {
+            "id": 44,
+            "type": "regular"
+        },
+        {
+            "id": 45,
+            "type": "regular"
+        },
+        {
+            "id": 46,
+            "type": "two-tone"
+        },
+        {
+            "id": 47,
+            "type": "regular"
+        },
+        {
+            "id": 48,
+            "type": "regular"
+        },
+        {
+            "id": 49,
+            "type": "two-tone"
+        },
+        {
+            "id": 50,
+            "type": "two-tone"
+        },
+        {
+            "id": 51,
+            "type": "regular"
+        },
+        {
+            "id": 52,
+            "type": "regular"
+        },
+        {
+            "id": 53,
+            "type": "regular"
+        },
+        {
+            "id": 54,
+            "type": "regular"
+        },
+        {
+            "id": 55,
+            "type": "regular"
+        },
+        {
+            "id": 56,
+            "type": "regular"
+        },
+        {
+            "id": 57,
+            "type": "two-tone"
+        },
+        {
+            "id": 58,
+            "type": "two-tone"
+        },
+        {
+            "id": 59,
+            "type": "two-tone"
+        },
+        {
+            "id": 60,
+            "type": "regular"
+        },
+        {
+            "id": 61,
+            "type": "regular"
+        }
+    ],
+    "shops": [
+        {
+            "name": "body",
+            "resequencing_lag": 3
+        },
+        {
+            "name": "paint",
+            "resequencing_lag": 3
+        },
+        {
+            "name": "assembly",
+            "resequencing_lag": 0
+        }
+    ]
+}

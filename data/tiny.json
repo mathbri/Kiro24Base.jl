@@ -1,0 +1,75 @@
+{
+    "shops": [
+        {
+            "name": "body", 
+            "resequencing_lag": 1
+        },
+        {
+            "name": "paint", 
+            "resequencing_lag": 2
+        },
+        {
+            "name": "assembly", 
+            "resequencing_lag": 0
+        }
+    ],
+    "parameters": {
+        "two_tone_delta": 2,
+        "resequencing_cost": 20
+    },
+    "vehicles": [
+        {"id": 1, "type": "regular"},
+        {"id": 2, "type": "regular"},
+        {"id": 3, "type": "two-tone"},
+        {"id": 4, "type": "regular"},
+        {"id": 5, "type": "two-tone"}
+    ],
+    "constraints": [
+        {
+            "id": 1,
+            "type": "batch_size",
+            "shop": "body",
+            "cost": 2,
+            "min_vehicles": 2,
+            "max_vehicles": 4,
+            "vehicles": [1, 2, 4]
+        },
+        {
+            "id": 2,
+            "type": "lot_change",
+            "shop": "paint",
+            "cost": 3,
+            "partition": [
+                [1, 2],
+                [3, 4, 5]
+            ]
+        },
+        {
+            "id": 3,
+            "type": "rolling_window",
+            "shop": "assembly",
+            "cost": 2,
+            "window_size": 3,
+            "max_vehicles": 2,
+            "vehicles": [1, 2, 5]
+        },
+        {
+            "id": 4,
+            "type": "batch_size",
+            "shop": "assembly",
+            "cost": 3,
+            "min_vehicles": 2,
+            "max_vehicles": 3,
+            "vehicles": [1, 2, 3]
+        },
+        {
+            "id": 5,
+            "type": "batch_size",
+            "shop": "assembly",
+            "cost": 3,
+            "min_vehicles": 1,
+            "max_vehicles": 2,
+            "vehicles": [4, 5]
+        }
+    ]
+}
