@@ -50,7 +50,10 @@ function read_solution(instance::Instance, solution_file::String)
     # Reading the solution file
     solDict::Dict{String,Dict{String,Vector{Int}}} = JSON.parsefile(solution_file)
     # Creating an empty solution
-    solution = zero_solution(instance)
+    solution = Solution(
+        zeros(Int, length(instance.vehicles), length(instance.shops)),
+        zeros(Int, length(instance.vehicles), length(instance.shops)),
+    )
     # Completing the empty solution with the solution dictionnary
     for (s, shop) in enumerate(instance.shops)
         solution.entries[:, s] = solDict[shop.name]["entry"]
