@@ -47,6 +47,7 @@ function read_instance(instance_file::String; verbose::Bool=false)
         # Adding the vehicle to the instance
         push!(instance.vehicles, vehicle)
     end
+    sort!(instance.vehicles; by=v -> v.id)
     verbose && println(instance.vehicles)
     verbose && println("Instance shops : $(length(instanceDict["shops"]))")
     for shopDict in instanceDict["shops"]
