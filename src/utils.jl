@@ -36,8 +36,8 @@ function paint_shop_exit_sequence(
             # Putting apply to false 
             applyPermute[vId] = false
             # Not updating index as the vId at the current idx changed
-            verbose && println("\tUpdated exit sequence : ")
-            verbose && println("\t", EXIT, "\n")
+            # verbose && println("\tUpdated exit sequence : ")
+            # verbose && println("\t", EXIT, "\n")
         else
             if instance.vehicles[vId].twoTone
                 verbose &&

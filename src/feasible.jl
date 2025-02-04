@@ -14,6 +14,14 @@ function check_position_unicity(sequence::Vector{Int}; verbose::Bool=false)
     # The sequence must be composed of unique intergers
     if length(unique(sequence)) != length(sequence)
         verbose && @warn "The sequence is not valid : $sequence (elements must be unique)"
+        uniques = unique(sequence)
+        notUniques = Int[]
+        for n in uniques
+            if length(findall(sequence .== n)) > 1
+                push!(notUniques, n)
+            end
+        end
+        verbose && @warn "Duplicate elements : $notUniques"
         return false
     end
     return true
@@ -24,6 +32,8 @@ function check_sequence_equality(entry::Vector{Int}, exit::Vector{Int}; verbose:
     if entry != exit
         verbose &&
             @warn "The entry and exit sequences are not valid : $(entry) != $(exit) (sequences must be the same)"
+        verbose &&
+            @warn "Entry and exit sequence differs at idxs $(findall(entry .!= exit))"
         return false
     end
     return true
@@ -33,7 +43,7 @@ function check_paint_shop_requirements(
     instance::Instance, entry::Vector{Int}, exit::Vector{Int}; verbose::Bool=false
 )
     # Computing it from scratch
-    verifExit = paint_shop_exit_sequence(instance, entry)
+    verifExit = paint_shop_exit_sequence(instance, entry; verbose=false)
     # Comparing to the exit sequence given
     if verifExit != exit
         verbose &&
@@ -47,6 +57,7 @@ end
 function is_feasible(instance::Instance, solution::Solution; verbose::Bool=false)
     # For each shop, verifying that the entry and exit sequences are valid
     for s in 1:length(instance.shops)
+        # println("Checking shop $(instance.shops[s].name)")
         entry = solution.entries[:, s]
         exit = solution.exits[:, s]
         nVehicles = length(instance.vehicles)
