@@ -76,3 +76,45 @@ function write_solution(instance::Instance, solution::Solution)
         JSON.print(io, solDict)
     end
 end
+
+function test_all_groups_sol(instance::Instance)
+    allSol = Dict()
+    for gr in 1:22
+        # No group 19
+        gr == 19 && continue
+        instName = replace(instance.name, '_' => '-')
+        sol = read_solution(
+            instance,
+            joinpath("Rendu-REOP-24-25", "Groupe-$(gr)", "KIRO-$instName-sol_$(gr).json"),
+        )
+        allSol[gr] = (is_feasible(instance, sol), compute_cost(instance, sol))
+        println("Groupe $(gr) : $(allSol[gr])")
+        if !is_feasible(instance, sol)
+            sol2 = Solution(instance, sol.entries)
+            println(
+                "Solution not feasible, correction proposed : $((is_feasible(instance, sol2), compute_cost(instance, sol2)))",
+            )
+        end
+    end
+    # return allSol
+end
+
+function test_group(n::Int)
+    for instanceName in ["small_1", "small_2", "medium_1", "medium_2", "large_1", "large_2"]
+        instance = read_instance(joinpath("data", "$(instanceName).json"))
+        instName = replace(instance.name, '_' => '-')
+        sol = read_solution(
+            instance,
+            joinpath("Rendu-REOP-24-25", "Groupe-$n", "KIRO-$instName-sol_$n.json"),
+        )
+        println(
+            "Instance $instName : $((is_feasible(instance, sol), compute_cost(instance, sol)))",
+        )
+        if !is_feasible(instance, sol)
+            sol2 = Solution(instance, sol.entries)
+            println(
+                "Solution not feasible, correction proposed : $((is_feasible(instance, sol2), compute_cost(instance, sol2)))",
+            )
+        end
+    end
+end

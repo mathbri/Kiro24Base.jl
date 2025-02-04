@@ -32,5 +32,6 @@ export check_position_range,
     check_sequence_equality,
     check_paint_shop_requirements,
     is_feasible
+export test_all_groups_sol, test_group
 
 end
